@@ -52,4 +52,3 @@ while True:
    
     cv2.imshow("cam feed", frame)
     cv2.waitKey(1)
-
