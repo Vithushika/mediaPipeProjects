@@ -19,6 +19,7 @@ connections = [(0,1), (1,2), (2,3), (3,4), #thumb
 
 while True:
     ref, frame = cap.read()
+    frame = cv2.flip(frame, 1)
     frameRGB = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
     mpimage = mp.Image(image_format=mp.ImageFormat.SRGB, data=frameRGB) #convert open cv image to mp image
     detection_result = detector.detect(mpimage) #take each frame and detect hand landmarks
